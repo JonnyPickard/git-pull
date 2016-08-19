@@ -25,5 +25,12 @@ class UserModelTests: XCTestCase {
         XCTAssertEqual(user.userName, "Test name", "Initializer should set userName")
     }
     
+    func testInit_CanInitializerWithUserAvatar() {
+        let image = UIImage()
+        let user = UserModel(name: "Test name", avatar: image)
+        
+        XCTAssertEqual(user.userAvatar, image, "Initializer can initialze with userAvatar")
+    }
+    
 
 }

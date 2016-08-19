@@ -6,12 +6,14 @@
 //  Copyright © 2016 Jonny. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct UserModel {
     let userName: String
+    let userAvatar: UIImage
     
-    init(name: String) {
+    init(name: String, avatar: UIImage = UIImage()) {
         userName = name
+        userAvatar = avatar
     }
 }
