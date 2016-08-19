@@ -12,12 +12,18 @@ import XCTest
 class UserModelTests: XCTestCase {
     var testUrl: String! = nil
     var testName: String! = nil
+    var user: UserModel! = nil
+    var image: UIImage! = nil
+    var testRepoCount: Int! = nil
     
     override func setUp() {
         super.setUp()
         
         testUrl = "http://www.github.com/testurl"
         testName = "Test name"
+        testRepoCount = 5
+        
+        user = UserModel(name: testName, url: testUrl, repoCount: testRepoCount)
     }
     
     override func tearDown() {
@@ -25,28 +31,25 @@ class UserModelTests: XCTestCase {
     }
 
     func testInit_ShouldInitializeWithUsername() {
-        let user = UserModel(name: testName, url: testUrl)
-    
         XCTAssertEqual(user.userName, testName, "Initializer should set userName")
     }
     
     func testInit_CanInitializeWithUserAvatar() {
-        let image = UIImage()
-        let user = UserModel(name: testName,  url: testUrl, avatar: image)
-        
-        XCTAssertEqual(user.userAvatar, image, "Initializer can initialze with userAvatar")
+        image = UIImage()
+        let testUser = UserModel(name: testName, url: testUrl, repoCount: testRepoCount, avatar: image)
+        XCTAssertEqual(testUser.userAvatar, image, "Initializer can initialze with userAvatar")
     }
     
-    func testInit_shouldInitializeWithUserUrl() {
-        let user = UserModel(name: testName, url: testUrl)
-        
-        XCTAssertEqual(user.userUrl, testUrl)
+    func testInit_ShouldInitializeWithUserUrl() {
+       XCTAssertEqual(user.userUrl, testUrl)
+    }
+    
+    func testInit_ShouldInitializeWithUserRepoCount() {
+        XCTAssertEqual(user.userRepoCount, testRepoCount, "Initializer should initialze with userRepoCount")
     }
     
     func testSetCustomUserAvatar_ShouldSetCustomUserAvatarImage() {
-        let image = UIImage()
-        var user = UserModel(name: testName, url: testUrl)
-        
+        image = UIImage()
         user.setCustomUserAvatar(image)
         
         XCTAssertEqual(user.userAvatar, image, "setCustomUserAvatar should change userAvatar image to defined image")

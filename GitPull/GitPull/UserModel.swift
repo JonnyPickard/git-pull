@@ -11,11 +11,13 @@ import UIKit
 struct UserModel {
     let userName: String
     let userUrl: String
+    let userRepoCount: Int
     var userAvatar: UIImage
     
-    init(name: String, url: String, avatar: UIImage = UIImage()) {
+    init(name: String, url: String, repoCount: Int, avatar: UIImage = UIImage()) {
         userName = name
         userUrl = url
+        userRepoCount = repoCount
         userAvatar = avatar
     }
     
