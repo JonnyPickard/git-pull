@@ -35,4 +35,21 @@ class APIRequestManagerTests: XCTestCase {
         
         waitForExpectationsWithTimeout(1, handler: nil)
     }
+    
+    func testGetRequestWithCustomParams_ShouldQueryTheGithubAPIWithCustomParams() {
+        let params = "test"
+        
+        let apiRequestManager = APIRequestManager()
+        
+        let expectation = expectationWithDescription("Completion")
+        
+        let session = Session(cassetteName: "apiGetRequestWithCustomParmas")
+        
+        apiRequestManager.getRequest(session, params: params) { result, success in
+            expectation.fulfill()
+            XCTAssertEqual(success, true, "APIRequestManager #getRequest should return true on successful completion with custom params")
+        }
+        
+        waitForExpectationsWithTimeout(1, handler: nil)
+    }
 }

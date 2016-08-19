@@ -10,8 +10,9 @@ import Foundation
 
 class APIRequestManager {
     
-    func getRequest(URLSession: NSURLSession = NSURLSession.sharedSession(), completion: (result: NSData?, success: Bool) -> Void) {
-        let url = NSURL(string: "https://api.github.com/search/users?q=")
+    func getRequest(URLSession: NSURLSession = NSURLSession.sharedSession(), params: String = "", completion: (result: NSData?, success: Bool) -> Void) {
+        
+        let url = NSURL(string: "https://api.github.com/search/users?q=" + params)
         
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
