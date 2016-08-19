@@ -10,9 +10,14 @@ import XCTest
 @testable import GitPull
 
 class UserModelTests: XCTestCase {
-
+    var testUrl: String! = nil
+    var testName: String! = nil
+    
     override func setUp() {
         super.setUp()
+        
+        testUrl = "http://www.github.com/testurl"
+        testName = "Test name"
     }
     
     override func tearDown() {
@@ -20,21 +25,27 @@ class UserModelTests: XCTestCase {
     }
 
     func testInit_ShouldInitializeWithUsername() {
-        let user = UserModel(name: "Test name")
+        let user = UserModel(name: testName, url: testUrl)
     
-        XCTAssertEqual(user.userName, "Test name", "Initializer should set userName")
+        XCTAssertEqual(user.userName, testName, "Initializer should set userName")
     }
     
-    func testInit_CanInitializerWithUserAvatar() {
+    func testInit_CanInitializeWithUserAvatar() {
         let image = UIImage()
-        let user = UserModel(name: "Test name", avatar: image)
+        let user = UserModel(name: testName,  url: testUrl, avatar: image)
         
         XCTAssertEqual(user.userAvatar, image, "Initializer can initialze with userAvatar")
     }
     
+    func testInit_shouldInitializeWithUserUrl() {
+        let user = UserModel(name: testName, url: testUrl)
+        
+        XCTAssertEqual(user.userUrl, testUrl)
+    }
+    
     func testSetCustomUserAvatar_ShouldSetCustomUserAvatarImage() {
         let image = UIImage()
-        var user = UserModel(name: "Test name")
+        var user = UserModel(name: testName, url: testUrl)
         
         user.setCustomUserAvatar(image)
         

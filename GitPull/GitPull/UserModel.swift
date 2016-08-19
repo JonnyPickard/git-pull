@@ -10,10 +10,12 @@ import UIKit
 
 struct UserModel {
     let userName: String
+    let userUrl: String
     var userAvatar: UIImage
     
-    init(name: String, avatar: UIImage = UIImage()) {
+    init(name: String, url: String, avatar: UIImage = UIImage()) {
         userName = name
+        userUrl = url
         userAvatar = avatar
     }
     
