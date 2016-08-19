@@ -10,7 +10,7 @@ import Foundation
 
 class APIRequestManager {
     
-    func getRequest(URLSession: NSURLSession = NSURLSession.sharedSession(), params: String = "", completion: (result: NSData?, success: Bool) -> Void) {
+    func getRequest(URLSession: NSURLSession = NSURLSession.sharedSession(), params: String = "", completion: (result: NSDictionary?, success: Bool) -> Void) {
         
         let params = params.trim().lowercaseString
         
@@ -27,11 +27,19 @@ class APIRequestManager {
             if error != nil {
                 print(error)
                 return
-            } else {
-                completion(result: data!, success: true)
+            }
+
+            do {
+                if let convertedJsonIntoDict = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                    
+                    completion(result: convertedJsonIntoDict, success: true)
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
             }
         }
         task.resume()
         
     }
+    
 }
