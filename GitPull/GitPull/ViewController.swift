@@ -9,23 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let api = APIRequestManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        api.getRequest {
-            result, success in
-            
-            print(success)
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
 }
 

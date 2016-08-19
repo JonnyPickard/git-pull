@@ -12,6 +12,8 @@ class APIRequestManager {
     
     func getRequest(URLSession: NSURLSession = NSURLSession.sharedSession(), params: String = "", completion: (result: NSData?, success: Bool) -> Void) {
         
+        let params = params.trim().lowercaseString
+        
         let url = NSURL(string: "https://api.github.com/search/users?q=" + params)
         
         let request = NSMutableURLRequest(URL: url!)

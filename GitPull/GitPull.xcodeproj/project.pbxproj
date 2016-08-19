@@ -18,8 +18,10 @@
 		3882F7C91D674C32004E6F20 /* APIRequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882F7C81D674C32004E6F20 /* APIRequestManagerTests.swift */; };
 		3882F7CB1D674EC2004E6F20 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3882F7CA1D674EC2004E6F20 /* Podfile */; };
 		3882F7CD1D675062004E6F20 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882F7CC1D675062004E6F20 /* APIRequestManager.swift */; };
-		3882F7CF1D6757E5004E6F20 /* apiGetRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3882F7CE1D6757E5004E6F20 /* apiGetRequest.json */; };
-		3882F7D21D675CFE004E6F20 /* apiGetRequestWithCustomParmas.json in Resources */ = {isa = PBXBuildFile; fileRef = 3882F7D11D675CFE004E6F20 /* apiGetRequestWithCustomParmas.json */; };
+		3882F7D41D675E81004E6F20 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882F7D31D675E81004E6F20 /* extensions.swift */; };
+		3882F7DB1D676071004E6F20 /* apiGetRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3882F7D81D67605A004E6F20 /* apiGetRequest.json */; };
+		3882F7DC1D676071004E6F20 /* apiGetRequestWithCustomParmas.json in Resources */ = {isa = PBXBuildFile; fileRef = 3882F7D91D67605A004E6F20 /* apiGetRequestWithCustomParmas.json */; };
+		3882F7DD1D676071004E6F20 /* apiGetRequestWithCustomParmas2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3882F7DA1D67605A004E6F20 /* apiGetRequestWithCustomParmas2.json */; };
 		888568E5EB3DCC2E24D9248F /* Pods_GitPull.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EBCD0F00411F790068E728 /* Pods_GitPull.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +52,10 @@
 		3882F7C81D674C32004E6F20 /* APIRequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManagerTests.swift; sourceTree = "<group>"; };
 		3882F7CA1D674EC2004E6F20 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		3882F7CC1D675062004E6F20 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
-		3882F7CE1D6757E5004E6F20 /* apiGetRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apiGetRequest.json; sourceTree = "<group>"; };
-		3882F7D11D675CFE004E6F20 /* apiGetRequestWithCustomParmas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apiGetRequestWithCustomParmas.json; sourceTree = "<group>"; };
+		3882F7D31D675E81004E6F20 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		3882F7D81D67605A004E6F20 /* apiGetRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apiGetRequest.json; sourceTree = "<group>"; };
+		3882F7D91D67605A004E6F20 /* apiGetRequestWithCustomParmas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apiGetRequestWithCustomParmas.json; sourceTree = "<group>"; };
+		3882F7DA1D67605A004E6F20 /* apiGetRequestWithCustomParmas2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apiGetRequestWithCustomParmas2.json; sourceTree = "<group>"; };
 		5043ED08C4D742429F304324 /* Pods_GitPullTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitPullTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1A5F5587073B4C852DA620 /* Pods-GitPull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitPull.debug.xcconfig"; path = "GitPull/Pods/Target Support Files/Pods-GitPull/Pods-GitPull.debug.xcconfig"; sourceTree = "<group>"; };
 		B2EBCD0F00411F790068E728 /* Pods_GitPull.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitPull.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,13 +107,13 @@
 			children = (
 				3882F7CA1D674EC2004E6F20 /* Podfile */,
 				3882F7A11D673E26004E6F20 /* AppDelegate.swift */,
-				3882F7A31D673E26004E6F20 /* ViewController.swift */,
+				3882F7D61D675E95004E6F20 /* Controllers */,
 				3882F7A51D673E26004E6F20 /* Main.storyboard */,
 				3882F7A81D673E26004E6F20 /* Assets.xcassets */,
 				3882F7AA1D673E26004E6F20 /* LaunchScreen.storyboard */,
 				3882F7AD1D673E26004E6F20 /* Info.plist */,
 				3882F7C51D674AFA004E6F20 /* Model */,
-				3882F7CC1D675062004E6F20 /* APIRequestManager.swift */,
+				3882F7D51D675E88004E6F20 /* Helpers */,
 			);
 			path = GitPull;
 			sourceTree = "<group>";
@@ -128,6 +132,7 @@
 		3882F7C51D674AFA004E6F20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3882F7CC1D675062004E6F20 /* APIRequestManager.swift */,
 				3882F7C31D67425F004E6F20 /* UserModel.swift */,
 			);
 			name = Model;
@@ -136,11 +141,36 @@
 		3882F7D01D6757EF004E6F20 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				3882F7D11D675CFE004E6F20 /* apiGetRequestWithCustomParmas.json */,
-				3882F7CE1D6757E5004E6F20 /* apiGetRequest.json */,
+				3882F7D71D67605A004E6F20 /* DVR */,
 			);
 			name = Fixtures;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		3882F7D51D675E88004E6F20 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3882F7D31D675E81004E6F20 /* extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3882F7D61D675E95004E6F20 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3882F7A31D673E26004E6F20 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3882F7D71D67605A004E6F20 /* DVR */ = {
+			isa = PBXGroup;
+			children = (
+				3882F7D81D67605A004E6F20 /* apiGetRequest.json */,
+				3882F7D91D67605A004E6F20 /* apiGetRequestWithCustomParmas.json */,
+				3882F7DA1D67605A004E6F20 /* apiGetRequestWithCustomParmas2.json */,
+			);
+			path = DVR;
 			sourceTree = "<group>";
 		};
 		8437E79FF74174C8397E51D1 /* Pods */ = {
@@ -261,8 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3882F7D21D675CFE004E6F20 /* apiGetRequestWithCustomParmas.json in Resources */,
-				3882F7CF1D6757E5004E6F20 /* apiGetRequest.json in Resources */,
+				3882F7DB1D676071004E6F20 /* apiGetRequest.json in Resources */,
+				3882F7DC1D676071004E6F20 /* apiGetRequestWithCustomParmas.json in Resources */,
+				3882F7DD1D676071004E6F20 /* apiGetRequestWithCustomParmas2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3882F7D41D675E81004E6F20 /* extensions.swift in Sources */,
 				3882F7CD1D675062004E6F20 /* APIRequestManager.swift in Sources */,
 				3882F7A41D673E26004E6F20 /* ViewController.swift in Sources */,
 				3882F7C41D67425F004E6F20 /* UserModel.swift in Sources */,

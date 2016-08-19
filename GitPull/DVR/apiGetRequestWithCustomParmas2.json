@@ -1,0 +1,49 @@
+{
+  "interactions" : [
+    {
+      "recorded_at" : 1471621225.976216,
+      "response" : {
+        "body" : {
+          "total_count" : 0,
+          "incomplete_results" : false,
+          "items" : [
+
+          ]
+        },
+        "status" : 200,
+        "url" : "https:\/\/api.github.com\/search\/users?q=testparams",
+        "headers" : {
+          "Content-Encoding" : "gzip",
+          "Content-Security-Policy" : "default-src 'none'",
+          "Server" : "GitHub.com",
+          "Cache-Control" : "no-cache",
+          "Strict-Transport-Security" : "max-age=31536000; includeSubdomains; preload",
+          "X-RateLimit-Reset" : "1471621285",
+          "Status" : "200 OK",
+          "X-GitHub-Media-Type" : "github.v3",
+          "Access-Control-Allow-Origin" : "*",
+          "X-Served-By" : "2811da37fbdda4367181b328b22b2499",
+          "X-GitHub-Request-Id" : "55D3EA7C:54AC:48C5244:57B72868",
+          "X-XSS-Protection" : "1; mode=block",
+          "Vary" : "Accept-Encoding",
+          "Date" : "Fri, 19 Aug 2016 15:40:25 GMT",
+          "X-RateLimit-Limit" : "10",
+          "Access-Control-Expose-Headers" : "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Transfer-Encoding" : "Identity",
+          "X-Frame-Options" : "deny",
+          "X-RateLimit-Remaining" : "9",
+          "Content-Type" : "application\/json; charset=utf-8",
+          "X-Content-Type-Options" : "nosniff"
+        }
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "https:\/\/api.github.com\/search\/users?q=testparams",
+        "headers" : {
+
+        }
+      }
+    }
+  ],
+  "name" : "apiGetRequestWithCustomParmas2"
+}
