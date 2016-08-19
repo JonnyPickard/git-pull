@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import GitPull
 
 class UserModelTests: XCTestCase {
 
@@ -18,6 +19,11 @@ class UserModelTests: XCTestCase {
         super.tearDown()
     }
 
+    func testInit_ShouldInitializeWithUsername() {
+        let user = UserModel(name: "Test name")
+    
+        XCTAssertEqual(user.userName, "Test name", "Initializer should set userName")
+    }
     
 
 }

@@ -8,3 +8,10 @@
 
 import Foundation
 
+struct UserModel {
+    let userName: String
+    
+    init(name: String) {
+        userName = name
+    }
+}
