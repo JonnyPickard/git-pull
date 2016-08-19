@@ -10,10 +10,14 @@ import UIKit
 
 struct UserModel {
     let userName: String
-    let userAvatar: UIImage
+    var userAvatar: UIImage
     
     init(name: String, avatar: UIImage = UIImage()) {
         userName = name
+        userAvatar = avatar
+    }
+    
+    mutating func setCustomUserAvatar(avatar: UIImage) {
         userAvatar = avatar
     }
 }

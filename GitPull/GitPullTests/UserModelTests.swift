@@ -32,5 +32,14 @@ class UserModelTests: XCTestCase {
         XCTAssertEqual(user.userAvatar, image, "Initializer can initialze with userAvatar")
     }
     
+    func testSetCustomUserAvatar_ShouldSetCustomUserAvatarImage() {
+        let image = UIImage()
+        var user = UserModel(name: "Test name")
+        
+        user.setCustomUserAvatar(image)
+        
+        XCTAssertEqual(user.userAvatar, image, "setCustomUserAvatar should change userAvatar image to defined image")
+    }
+    
 
 }
