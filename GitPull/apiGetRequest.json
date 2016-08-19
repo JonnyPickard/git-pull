@@ -1,0 +1,50 @@
+{
+  "interactions" : [
+    {
+      "recorded_at" : 1471619118.42334,
+      "response" : {
+        "body" : {
+          "message" : "Validation Failed",
+          "errors" : [
+            {
+              "field" : "q",
+              "code" : "missing",
+              "resource" : "Search"
+            }
+          ],
+          "documentation_url" : "https:\/\/developer.github.com\/v3\/search"
+        },
+        "status" : 422,
+        "url" : "https:\/\/api.github.com\/search\/users?q=",
+        "headers" : {
+          "Content-Type" : "application\/json; charset=utf-8",
+          "X-GitHub-Media-Type" : "github.v3",
+          "Access-Control-Allow-Origin" : "*",
+          "Content-Security-Policy" : "default-src 'none'",
+          "X-RateLimit-Reset" : "1471619178",
+          "X-XSS-Protection" : "1; mode=block",
+          "Server" : "GitHub.com",
+          "X-GitHub-Request-Id" : "55D3EA7C:54AC:483FED4:57B7202E",
+          "Access-Control-Expose-Headers" : "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Cache-Control" : "no-cache",
+          "Date" : "Fri, 19 Aug 2016 15:05:18 GMT",
+          "Content-Length" : "154",
+          "X-RateLimit-Limit" : "10",
+          "X-RateLimit-Remaining" : "8",
+          "Strict-Transport-Security" : "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options" : "nosniff",
+          "Status" : "422 Unprocessable Entity",
+          "X-Frame-Options" : "deny"
+        }
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "https:\/\/api.github.com\/search\/users?q=",
+        "headers" : {
+
+        }
+      }
+    }
+  ],
+  "name" : "apiGetRequest"
+}

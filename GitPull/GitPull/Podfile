@@ -1,0 +1,10 @@
+project '../GitPull.xcodeproj'
+use_frameworks!
+
+target "GitPull" do
+    pod "DVR"
+end
+
+target "GitPullTests" do
+    pod "DVR"
+end
